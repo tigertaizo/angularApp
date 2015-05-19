@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<meta charset="UTF-8" />
+<title>AngularJS TIPS</title>
+</head>
+<body>
+
+<!--コントローラーを適用2-->
+<div ng-controller="myController">
+  {{msg}}
+</div>
+
+<script src="bower_components/angular/angular.js"></script>
+<script>
+
+// myAppモジュールを新規に作成
+angular.module('myApp', []);
+
+// myAppモジュールにmyControllerコントローラーを登録1
+angular.module('myApp')
+  .controller('myController', function($scope) {
+    $scope.msg = 'Hello, AngularJS!';
+  });
+
+</script>
+</body>
+</html>

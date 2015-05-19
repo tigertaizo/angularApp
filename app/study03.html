@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angularの練習</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="scripts/myscript.js"></script>
+</head>
+
+<body>
+	<h1>Angularの練習</h1>
+	<div ng-controller="mainCtrl">
+		<p>{{users.length}}</p>
+
+    <p><input type="text" ng-model="query.name"</p>
+		<ul>
+      <li ng-repeat="user in users|orderBy:'-score'|limitTo:3|filter:query">
+			<!-- <li ng-repeat="user in users|limitTo:5"> -->
+				{{user.name|uppercase}} {{user.score|number:4}}
+  		</li>
+		</ui>
+	</div>
+
+</body>
+</html>

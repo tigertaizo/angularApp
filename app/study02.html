@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angularの練習</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="scripts/myscript.js"></script>
+</head>
+
+<body>
+	<h1>Angularの練習</h1>
+	<input type="text" ng-model="name">
+	<p>こんにちは！{{name}}</p>
+	<p>{{25 * 500|number}}</p>
+
+
+	<div ng-controller="mainCtrl">
+		<p>{{today|date:'yyyy-MM-dd'}}</p>
+
+
+		<p>{{users.length}}</p>
+		<ul>
+			<li ng-repeat="user in users">
+				<!-- {{user.name}} {{user.score}} -->
+				{{user.name|uppercase}} {{user.score|number:4}}
+			</li>
+		</ui>
+	</div>
+
+
+</body>
+</html>
