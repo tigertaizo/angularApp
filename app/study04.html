@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Angularの練習</title>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="scripts/myscript.js"></script>
+</head>
+
+<body>
+	<h1>Angularの練習</h1>
+	<div ng-controller="mainCtrl">
+
+		<ul>
+      <li ng-repeat="user in users" ng-controller="userItemCtrl">
+				 {{user.name}} {{user.score}}
+        <button ng-click="increment()">+1</button>
+  		</li>
+		</ui>
+	</div>
+
+</body>
+</html>
