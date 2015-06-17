@@ -15,6 +15,12 @@ app.controller('mainCtrl', function($scope) {
   $scope.today =new Date();
 
 
-
-
 });
+
+app.controller('userItemCtrl', function($scope) {
+  $scope.increment = function() {
+    $scope.user.score++;
+  }
+});
+
+
